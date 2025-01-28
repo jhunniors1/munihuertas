@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesa de Partes - Municipalidad Distrital de Huertas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos de la página, similares a los de tu código original */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #003300;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #004d00;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        header .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        header .logo-container h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        header nav {
+            display: flex;
+            gap: 10px;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 15px;
+            border: 2px solid white;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        header nav a:hover {
+            background-color: white;
+            color: #004d00;
+        }
+        .hero {
+            background-color: #e6ffe6;
+            color: #004d00;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #d9d9d9;
+            background-color: #ffffff;
+        }
+        .section h3 {
+            font-size: 2rem;
+            color: #003300;
+            margin-bottom: 20px;
+        }
+        .section table {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            border: 1px solid #d9d9d9;
+            background-color: #f9f9f9;
+        }
+        .section table th, .section table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .section table th {
+            background-color: #004d00;
+            color: white;
+        }
+        .section table td button {
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .section table td button.delete {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .section table td button.delete:hover {
+            background-color: #cc0000;
+        }
+        .section table td button.reply {
+            background-color: #008000;
+            color: white;
+        }
+        .section table td button.reply:hover {
+            background-color: #004d00;
+        }
+        footer {
+            background-color: #004d00;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        #replyModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        #replyModal div {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+        }
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #004d00;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #006600;
+        }
+    </style>
+</head>
+<body>
+<header>
+        <div class="logo-container">
+            <img src="img/logo.jpg" alt="Logo Municipalidad">
+            <h1>Municipalidad Distrital de Huertas</h1>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="mision-vision.html">Misión y Visión</a>
+            <a href="programas.html">Programas Sociales</a>
+            <a href="obras.html">Obras</a>
+            <a href="mesa_partes.html">Mesa de Partes</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </header>
+
+    <section class="hero">
+        <h1>Mesa de Partes - Municipalidad Distrital de Huertas</h1>
+        <p>Un espacio dedicado a facilitar la gestión de trámites y documentos en nuestra municipalidad. Nuestro objetivo es garantizar la transparencia y accesibilidad para todos los ciudadanos.</p>
+    </section>
+
+    <div class="section">
+        <h3>Documentos Enviados</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Asunto</th>
+                    <th>Archivo</th>
+                    <th>Respuesta</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>Consulta</td>
+                    <td><a href="documento1.pdf" target="_blank">Ver Documento</a></td>
+                    <td>Sin respuesta</td>
+                    <td>
+                        <button class="reply">Responder</button>
+                        <button class="delete">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana</td>
+                    <td>González</td>
+                    <td>Reclamación</td>
+                    <td><a href="documento2.pdf" target="_blank">Ver Documento</a></td>
+                    <td>Sin respuesta</td>
+                    <td>
+                        <button class="reply">Responder</button>
+                        <button class="delete">Eliminar</button>
+                    </td>
+                </tr>
+                <!-- Más filas según sea necesario -->
+            </tbody>
+        </table>
+    </div>
+
+    <a href="buscar.html" class="back-button">Buscar</a>
+
+    <div id="replyModal">
+        <div>
+            <h3>Responder Documento</h3>
+            <form id="replyForm" method="POST" action="responder.html">
+                <input type="hidden" name="id" id="documentId">
+                <textarea name="respuesta" rows="5" placeholder="Escribe tu respuesta aquí..." required></textarea>
+                <div style="text-align: right;">
+                    <button type="button" onclick="closeReplyModal()">Cancelar</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <a href="mesa_partes.html" class="back-button">Volver</a>
+
+    <script>
+    function replyDocument(id) {
+        document.getElementById('documentId').value = id;
+        document.getElementById('replyModal').style.display = 'flex';
+    }
+
+    function closeReplyModal() {
+        document.getElementById('replyModal').style.display = 'none';
+    }
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('header nav');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+
+    <footer>
+        <p>Municipalidad Distrital de Huertas &copy; 2025. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
