@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas Sociales - Municipalidad Distrital de Huertas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #003300;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #004d00;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo-container img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        header .logo-container h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        header nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 15px;
+            border: 2px solid white;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        header nav a:hover {
+            background-color: white;
+            color: #004d00;
+        }
+
+        .hero {
+            background-color: #e6ffe6;
+            color: #004d00;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #d9d9d9;
+            background-color: #ffffff;
+        }
+
+        .section h3 {
+            font-size: 2rem;
+            color: #003300;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .section img.primary {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 120px;
+            border-radius: 10px;
+            border: 1px solid #004d00;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #004d00;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+    header nav {
+        display: none; /* Ocultar menú en móviles por defecto */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    header nav.active {
+        display: flex; /* Mostrar el menú al activarse */
+    }
+    header nav a {
+        padding: 10px;
+        font-size: 1rem;
+        border: none;
+    }
+    .menu-toggle {
+        display: block; /* Mostrar el botón en dispositivos móviles */
+        cursor: pointer;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.jpg" alt="Logo Municipalidad">
+            <h1>Municipalidad Distrital de Huertas</h1>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="mision-vision.html">Misión y Visión</a>
+            <a href="programas.html">Programas Sociales</a>
+            <a href="obras.html">Obras</a>
+            <a href="mesa_partes.php">Mesa de Partes</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </header>
+
+    <section class="hero">
+        <h1>𝐏𝐑𝐎𝐆𝐑𝐀𝐌𝐀𝐒 𝐒𝐎𝐂𝐈𝐀𝐋𝐄𝐒 - 𝐌𝐔𝐍𝐈𝐂𝐈𝐏𝐀𝐋𝐈𝐃𝐀𝐃 𝐃𝐈𝐒𝐓𝐑𝐈𝐓𝐀𝐋 𝐃𝐄 𝐇𝐔𝐄𝐑𝐓𝐀𝐒</h1>
+        <p>𝑪𝒐𝒏𝒐𝒄𝒆 𝒍𝒐𝒔 𝒑𝒓𝒐𝒈𝒓𝒂𝒎𝒂𝒔 𝒔𝒐𝒄𝒊𝒂𝒍𝒆𝒔 𝒒𝒖𝒆 𝒐𝒇𝒓𝒆𝒄𝒆𝒎𝒐𝒔 𝒑𝒂𝒓𝒂 𝒎𝒆𝒋𝒐𝒓𝒂𝒓 𝒍𝒂 𝒄𝒂𝒍𝒊𝒅𝒂𝒅 𝒅𝒆 𝒗𝒊𝒅𝒂 𝒅𝒆 𝒏𝒖𝒆𝒔𝒕𝒓𝒂 𝒄𝒐𝒎𝒖𝒏𝒊𝒅𝒂𝒅.
+
+            𝑨 𝒕𝒓𝒂𝒗é𝒔 𝒅𝒆 𝒏𝒖𝒆𝒔𝒕𝒓𝒂𝒔 𝒊𝒏𝒊𝒄𝒊𝒂𝒕𝒊𝒗𝒂𝒔, 𝒕𝒓𝒂𝒃𝒂𝒋𝒂𝒎𝒐𝒔 𝒑𝒂𝒓𝒂 𝒂𝒑𝒐𝒚𝒂𝒓 𝒂 𝒍𝒂𝒔 𝒇𝒂𝒎𝒊𝒍𝒊𝒂𝒔 𝒎á𝒔 𝒗𝒖𝒍𝒏𝒆𝒓𝒂𝒃𝒍𝒆𝒔 𝒅𝒆𝒍 𝒅𝒊𝒔𝒕𝒓𝒊𝒕𝒐, 𝒑𝒓𝒐𝒎𝒐𝒗𝒊𝒆𝒏𝒅𝒐 𝒍𝒂 𝒊𝒏𝒄𝒍𝒖𝒔𝒊ó𝒏 𝒔𝒐𝒄𝒊𝒂𝒍 𝒚 𝒆𝒍 𝒅𝒆𝒔𝒂𝒓𝒓𝒐𝒍𝒍𝒐 𝒔𝒐𝒔𝒕𝒆𝒏𝒊𝒃𝒍𝒆. 𝑵𝒖𝒆𝒔𝒕𝒓𝒐𝒔 𝒑𝒓𝒐𝒈𝒓𝒂𝒎𝒂𝒔 𝒂𝒃𝒂𝒓𝒄𝒂𝒏:</p>
+    </section>
+
+    <div class="section">
+        <h3>𝐏𝐞𝐧𝐬𝐢ó𝐧 𝟔𝟓</h3>
+        <p>𝑼𝒏 𝒑𝒓𝒐𝒈𝒓𝒂𝒎𝒂 𝒒𝒖𝒆 𝒃𝒓𝒊𝒏𝒅𝒂 𝒂𝒑𝒐𝒚𝒐 𝒆𝒄𝒐𝒏ó𝒎𝒊𝒄𝒐 𝒂 𝒍𝒐𝒔 𝒂𝒅𝒖𝒍𝒕𝒐𝒔 𝒎𝒂𝒚𝒐𝒓𝒆𝒔 𝒆𝒏 𝒔𝒊𝒕𝒖𝒂𝒄𝒊ó𝒏 𝒅𝒆 𝒗𝒖𝒍𝒏𝒆𝒓𝒂𝒃𝒊𝒍𝒊𝒅𝒂𝒅, 𝒑𝒓𝒐𝒎𝒐𝒗𝒊𝒆𝒏𝒅𝒐 𝒔𝒖 𝒃𝒊𝒆𝒏𝒆𝒔𝒕𝒂𝒓 𝒚 𝒄𝒂𝒍𝒊𝒅𝒂𝒅 𝒅𝒆 𝒗𝒊𝒅𝒂.
+
+            𝑬𝒔𝒕𝒆 𝒑𝒓𝒐𝒈𝒓𝒂𝒎𝒂 𝒆𝒔𝒕á 𝒅𝒊𝒓𝒊𝒈𝒊𝒅𝒐 𝒂 𝒑𝒆𝒓𝒔𝒐𝒏𝒂𝒔 𝒎𝒂𝒚𝒐𝒓𝒆𝒔 𝒅𝒆 65 𝒂ñ𝒐𝒔 𝒒𝒖𝒆 𝒗𝒊𝒗𝒆𝒏 𝒆𝒏 𝒄𝒐𝒏𝒅𝒊𝒄𝒊𝒐𝒏𝒆𝒔 𝒅𝒆 𝒑𝒐𝒃𝒓𝒆𝒛𝒂 𝒆𝒙𝒕𝒓𝒆𝒎𝒂 𝒚 𝒒𝒖𝒆 𝒏𝒐 𝒄𝒖𝒆𝒏𝒕𝒂𝒏 𝒄𝒐𝒏 𝒖𝒏𝒂 𝒑𝒆𝒏𝒔𝒊ó𝒏 𝒏𝒊 𝒊𝒏𝒈𝒓𝒆𝒔𝒐𝒔 𝒇𝒊𝒋𝒐𝒔. 𝑺𝒖 𝒐𝒃𝒋𝒆𝒕𝒊𝒗𝒐 𝒑𝒓𝒊𝒏𝒄𝒊𝒑𝒂𝒍 𝒆𝒔 𝒈𝒂𝒓𝒂𝒏𝒕𝒊𝒛𝒂𝒓 𝒖𝒏 𝒊𝒏𝒈𝒓𝒆𝒔𝒐 𝒃á𝒔𝒊𝒄𝒐 𝒒𝒖𝒆 𝒍𝒆𝒔 𝒑𝒆𝒓𝒎𝒊𝒕𝒂 𝒄𝒖𝒃𝒓𝒊𝒓 𝒏𝒆𝒄𝒆𝒔𝒊𝒅𝒂𝒅𝒆𝒔 𝒆𝒔𝒆𝒏𝒄𝒊𝒂𝒍𝒆𝒔 𝒄𝒐𝒎𝒐 𝒂𝒍𝒊𝒎𝒆𝒏𝒕𝒂𝒄𝒊ó𝒏, 𝒔𝒂𝒍𝒖𝒅 𝒚 𝒗𝒊𝒗𝒊𝒆𝒏𝒅𝒂.</p>
+        <div class="gallery">
+            <img src="img/pen1.jpg" alt="Actividad 1 de Pensión 65">
+            <img src="img/pen2.jpg" alt="Actividad 2 de Pensión 65">
+            <img src="img/pen3.jpg" alt="Actividad 3 de Pensión 65">
+            <img src="img/pen4.jpg" alt="Actividad 4 de Pensión 65">
+            <img src="img/pen5.jpg" alt="Actividad 5 de Pensión 65">
+            <img src="img/pen6.jpg" alt="Actividad 6 de Pensión 65">
+            <img src="img/pen7.jpg" alt="Actividad 7 de Pensión 65">
+            <img src="img/pen8.jpg" alt="Actividad 8 de Pensión 65">
+            <img src="img/pen9.jpg" alt="Actividad 9 de Pensión 65">
+            <img src="img/pen10.jpg" alt="Actividad 10 de Pensión 65">
+            <img src="img/pen11.jpg" alt="Actividad 11 de Pensión 65">
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>𝐕𝐚𝐬𝐨 𝐝𝐞 𝐋𝐞𝐜𝐡𝐞</h3>
+        <p>𝐄𝐥 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐚 "𝐕𝐚𝐬𝐨 𝐝𝐞 𝐋𝐞𝐜𝐡𝐞" 𝐛𝐮𝐬𝐜𝐚 𝐦𝐞𝐣𝐨𝐫𝐚𝐫 𝐥𝐚 𝐧𝐮𝐭𝐫𝐢𝐜𝐢ó𝐧 𝐝𝐞 𝐧𝐢ñ𝐨𝐬 𝐦𝐞𝐧𝐨𝐫𝐞𝐬 𝐝𝐞 𝟔 𝐚ñ𝐨𝐬, 𝐦𝐚𝐝𝐫𝐞𝐬 𝐠𝐞𝐬𝐭𝐚𝐧𝐭𝐞𝐬 𝐲 𝐥𝐚𝐜𝐭𝐚𝐧𝐭𝐞𝐬, 𝐚𝐬í 𝐜𝐨𝐦𝐨 𝐩𝐞𝐫𝐬𝐨𝐧𝐚𝐬 𝐞𝐧 𝐬𝐢𝐭𝐮𝐚𝐜𝐢ó𝐧 𝐝𝐞 𝐯𝐮𝐥𝐧𝐞𝐫𝐚𝐛𝐢𝐥𝐢𝐝𝐚𝐝 𝐞𝐱𝐭𝐫𝐞𝐦𝐚. 𝐄𝐬𝐭𝐞 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐚 𝐩𝐫𝐨𝐩𝐨𝐫𝐜𝐢𝐨𝐧𝐚 𝐫𝐚𝐜𝐢𝐨𝐧𝐞𝐬 𝐝𝐞 𝐥𝐞𝐜𝐡𝐞 𝐲 𝐚𝐥𝐢𝐦𝐞𝐧𝐭𝐨𝐬 𝐜𝐨𝐦𝐩𝐥𝐞𝐦𝐞𝐧𝐭𝐚𝐫𝐢𝐨𝐬 𝐜𝐨𝐧 𝐞𝐥 𝐨𝐛𝐣𝐞𝐭𝐢𝐯𝐨 𝐝𝐞 𝐜𝐨𝐦𝐛𝐚𝐭𝐢𝐫 𝐥𝐚 𝐝𝐞𝐬𝐧𝐮𝐭𝐫𝐢𝐜𝐢ó𝐧 𝐢𝐧𝐟𝐚𝐧𝐭𝐢𝐥.</p>
+        <ul>
+            <li>𝐁𝐞𝐧𝐞𝐟𝐢𝐜𝐢𝐚𝐫𝐢𝐨𝐬: 𝐍𝐢ñ𝐨𝐬 𝐦𝐞𝐧𝐨𝐫𝐞𝐬 𝐝𝐞 𝟔 𝐚ñ𝐨𝐬 𝐲 𝐦𝐚𝐝𝐫𝐞𝐬 𝐠𝐞𝐬𝐭𝐚𝐧𝐭𝐞𝐬.</li>
+            <li>𝐎𝐛𝐣𝐞𝐭𝐢𝐯𝐨: 𝐑𝐞𝐝𝐮𝐜𝐢𝐫 𝐥𝐚 𝐝𝐞𝐬𝐧𝐮𝐭𝐫𝐢𝐜𝐢ó𝐧 𝐲 𝐦𝐞𝐣𝐨𝐫𝐚𝐫 𝐥𝐚 𝐜𝐚𝐥𝐢𝐝𝐚𝐝 𝐝𝐞 𝐯𝐢𝐝𝐚.</li>
+            <li>𝐈𝐦𝐩𝐥𝐞𝐦𝐞𝐧𝐭𝐚𝐜𝐢ó𝐧: 𝐀 𝐭𝐫𝐚𝐯é𝐬 𝐝𝐞 𝐥𝐨𝐬 𝐜𝐨𝐦𝐢𝐭é𝐬 𝐥𝐨𝐜𝐚𝐥𝐞𝐬 𝐲 𝐠𝐨𝐛𝐢𝐞𝐫𝐧𝐨𝐬 𝐦𝐮𝐧𝐢𝐜𝐢𝐩𝐚𝐥𝐞𝐬.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h3>𝐉𝐮𝐧𝐭𝐨𝐬</h3>
+        <p>"𝐉𝐮𝐧𝐭𝐨𝐬" 𝐞𝐬 𝐮𝐧 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐚 𝐝𝐞 𝐭𝐫𝐚𝐧𝐬𝐟𝐞𝐫𝐞𝐧𝐜𝐢𝐚𝐬 𝐦𝐨𝐧𝐞𝐭𝐚𝐫𝐢𝐚𝐬 𝐜𝐨𝐧𝐝𝐢𝐜𝐢𝐨𝐧𝐚𝐝𝐚𝐬 𝐪𝐮𝐞 𝐛𝐮𝐬𝐜𝐚 𝐫𝐨𝐦𝐩𝐞𝐫 𝐞𝐥 𝐜𝐢𝐜𝐥𝐨 𝐝𝐞 𝐥𝐚 𝐩𝐨𝐛𝐫𝐞𝐳𝐚 𝐞𝐧 𝐥𝐚𝐬 𝐟𝐚𝐦𝐢𝐥𝐢𝐚𝐬 𝐝𝐞 𝐥𝐚𝐬 𝐳𝐨𝐧𝐚𝐬 𝐦á𝐬 𝐯𝐮𝐥𝐧𝐞𝐫𝐚𝐛𝐥𝐞𝐬 𝐝𝐞𝐥 𝐩𝐚í𝐬. 𝐈𝐧𝐜𝐞𝐧𝐭𝐢𝐯𝐚 𝐥𝐚 𝐞𝐝𝐮𝐜𝐚𝐜𝐢ó𝐧, 𝐥𝐚 𝐬𝐚𝐥𝐮𝐝 𝐲 𝐥𝐚 𝐧𝐮𝐭𝐫𝐢𝐜𝐢ó𝐧 𝐞𝐧 𝐦𝐞𝐧𝐨𝐫𝐞𝐬 𝐝𝐞 𝐞𝐝𝐚𝐝.</p>
+        <ul>
+            <li>𝐁𝐞𝐧𝐞𝐟𝐢𝐜𝐢𝐚𝐫𝐢𝐨𝐬: 𝐅𝐚𝐦𝐢𝐥𝐢𝐚𝐬 𝐞𝐧 𝐬𝐢𝐭𝐮𝐚𝐜𝐢ó𝐧 𝐝𝐞 𝐩𝐨𝐛𝐫𝐞𝐳𝐚 𝐞𝐱𝐭𝐫𝐞𝐦𝐚.</li>
+            <li>𝐂𝐨𝐧𝐝𝐢𝐜𝐢𝐨𝐧𝐞𝐬: 𝐀𝐬𝐢𝐬𝐭𝐞𝐧𝐜𝐢𝐚 𝐫𝐞𝐠𝐮𝐥𝐚𝐫 𝐚 𝐞𝐬𝐜𝐮𝐞𝐥𝐚𝐬 𝐲 𝐜𝐞𝐧𝐭𝐫𝐨𝐬 𝐝𝐞 𝐬𝐚𝐥𝐮𝐝.</li>
+            <li>𝐎𝐛𝐣𝐞𝐭𝐢𝐯𝐨: 𝐀𝐬𝐞𝐠𝐮𝐫𝐚𝐫 𝐪𝐮𝐞 𝐥𝐨𝐬 𝐧𝐢ñ𝐨𝐬 𝐫𝐞𝐜𝐢𝐛𝐚𝐧 𝐞𝐝𝐮𝐜𝐚𝐜𝐢ó𝐧 𝐲 𝐚𝐭𝐞𝐧𝐜𝐢ó𝐧 𝐦é𝐝𝐢𝐜𝐚 𝐝𝐞 𝐜𝐚𝐥𝐢𝐝𝐚𝐝.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h3>𝐎𝐌𝐀𝐏𝐄𝐃</h3>
+        <p>𝐋𝐚 𝐎𝐟𝐢𝐜𝐢𝐧𝐚 𝐌𝐮𝐧𝐢𝐜𝐢𝐩𝐚𝐥 𝐝𝐞 𝐀𝐭𝐞𝐧𝐜𝐢ó𝐧 𝐚 𝐥𝐚𝐬 𝐏𝐞𝐫𝐬𝐨𝐧𝐚𝐬 𝐜𝐨𝐧 𝐃𝐢𝐬𝐜𝐚𝐩𝐚𝐜𝐢𝐝𝐚𝐝 (𝐎𝐌𝐀𝐏𝐄𝐃) 𝐛𝐫𝐢𝐧𝐝𝐚 𝐚𝐩𝐨𝐲𝐨 𝐢𝐧𝐭𝐞𝐠𝐫𝐚𝐥 𝐚 𝐩𝐞𝐫𝐬𝐨𝐧𝐚𝐬 𝐜𝐨𝐧 𝐝𝐢𝐬𝐜𝐚𝐩𝐚𝐜𝐢𝐝𝐚𝐝, 𝐩𝐫𝐨𝐦𝐨𝐯𝐢𝐞𝐧𝐝𝐨 𝐬𝐮 𝐢𝐧𝐜𝐥𝐮𝐬𝐢ó𝐧 𝐞𝐧 𝐥𝐚 𝐬𝐨𝐜𝐢𝐞𝐝𝐚𝐝 𝐦𝐞𝐝𝐢𝐚𝐧𝐭𝐞 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐚𝐬 𝐞𝐬𝐩𝐞𝐜í𝐟𝐢𝐜𝐨𝐬 𝐲 𝐚𝐬𝐢𝐬𝐭𝐞𝐧𝐜𝐢𝐚 𝐝𝐢𝐫𝐞𝐜𝐭𝐚.</p>
+        <ul>
+            <li>𝐒𝐞𝐫𝐯𝐢𝐜𝐢𝐨𝐬: 𝐄𝐯𝐚𝐥𝐮𝐚𝐜𝐢𝐨𝐧𝐞𝐬 𝐦é𝐝𝐢𝐜𝐚𝐬, 𝐚𝐬𝐞𝐬𝐨𝐫𝐚𝐦𝐢𝐞𝐧𝐭𝐨 𝐥𝐞𝐠𝐚𝐥 𝐲 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐚𝐬 𝐞𝐝𝐮𝐜𝐚𝐭𝐢𝐯𝐨𝐬.</li>
+            <li>𝐎𝐛𝐣𝐞𝐭𝐢𝐯𝐨: 𝐏𝐫𝐨𝐦𝐨𝐯𝐞𝐫 𝐥𝐚 𝐢𝐠𝐮𝐚𝐥𝐝𝐚𝐝 𝐝𝐞 𝐨𝐩𝐨𝐫𝐭𝐮𝐧𝐢𝐝𝐚𝐝𝐞𝐬 𝐩𝐚𝐫𝐚 𝐥𝐚𝐬 𝐩𝐞𝐫𝐬𝐨𝐧𝐚𝐬 𝐜𝐨𝐧 𝐝𝐢𝐬𝐜𝐚𝐩𝐚𝐜𝐢𝐝𝐚𝐝.</li>
+            <li>𝐈𝐦𝐩𝐥𝐞𝐦𝐞𝐧𝐭𝐚𝐜𝐢ó𝐧: 𝐀 𝐭𝐫𝐚𝐯é𝐬 𝐝𝐞 𝐥𝐚𝐬 𝐦𝐮𝐧𝐢𝐜𝐢𝐩𝐚𝐥𝐢𝐝𝐚𝐝𝐞𝐬 𝐝𝐢𝐬𝐭𝐫𝐢𝐭𝐚𝐥𝐞𝐬 𝐲 𝐩𝐫𝐨𝐯𝐢𝐧𝐜𝐢𝐚𝐥𝐞𝐬.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h3>𝐒𝐈𝐒𝐅𝐎</h3>
+        <p>𝐒𝐈𝐒𝐅𝐎 (𝐒𝐢𝐬𝐭𝐞𝐦𝐚 𝐝𝐞 𝐅𝐨𝐜𝐚𝐥𝐢𝐳𝐚𝐜𝐢ó𝐧 𝐝𝐞 𝐇𝐨𝐠𝐚𝐫𝐞𝐬) 𝐞𝐬 𝐮𝐧𝐚 𝐡𝐞𝐫𝐫𝐚𝐦𝐢𝐞𝐧𝐭𝐚 𝐝𝐢𝐬𝐞ñ𝐚𝐝𝐚 𝐩𝐚𝐫𝐚 𝐢𝐝𝐞𝐧𝐭𝐢𝐟𝐢𝐜𝐚𝐫 𝐚 𝐥𝐚𝐬 𝐟𝐚𝐦𝐢𝐥𝐢𝐚𝐬 𝐦á𝐬 𝐯𝐮𝐥𝐧𝐞𝐫𝐚𝐛𝐥𝐞𝐬 𝐲 𝐠𝐚𝐫𝐚𝐧𝐭𝐢𝐳𝐚𝐫 𝐪𝐮𝐞 𝐥𝐨𝐬 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐚𝐬 𝐬𝐨𝐜𝐢𝐚𝐥𝐞𝐬 𝐥𝐥𝐞𝐠𝐮𝐞𝐧 𝐚 𝐪𝐮𝐢𝐞𝐧𝐞𝐬 𝐦á𝐬 𝐥𝐨 𝐧𝐞𝐜𝐞𝐬𝐢𝐭𝐚𝐧. 𝐏𝐫𝐨𝐦𝐮𝐞𝐯𝐞 𝐥𝐚 𝐞𝐪𝐮𝐢𝐝𝐚𝐝 𝐲 𝐞𝐟𝐢𝐜𝐢𝐞𝐧𝐜𝐢𝐚 𝐞𝐧 𝐥𝐚 𝐝𝐢𝐬𝐭𝐫𝐢𝐛𝐮𝐜𝐢ó𝐧 𝐝𝐞 𝐫𝐞𝐜𝐮𝐫𝐬𝐨𝐬.</p>
+        <ul>
+            <li>𝐁𝐞𝐧𝐞𝐟𝐢𝐜𝐢𝐚𝐫𝐢𝐨𝐬: 𝐅𝐚𝐦𝐢𝐥𝐢𝐚𝐬 𝐞𝐧 𝐬𝐢𝐭𝐮𝐚𝐜𝐢ó𝐧 𝐝𝐞 𝐩𝐨𝐛𝐫𝐞𝐳𝐚 𝐨 𝐩𝐨𝐛𝐫𝐞𝐳𝐚 𝐞𝐱𝐭𝐫𝐞𝐦𝐚.</li>
+            <li>𝐎𝐛𝐣𝐞𝐭𝐢𝐯𝐨: 𝐌𝐞𝐣𝐨𝐫𝐚𝐫 𝐥𝐚 𝐟𝐨𝐜𝐚𝐥𝐢𝐳𝐚𝐜𝐢ó𝐧 𝐝𝐞 𝐥𝐨𝐬 𝐩𝐫𝐨𝐠𝐫𝐚𝐦𝐚𝐬 𝐬𝐨𝐜𝐢𝐚𝐥𝐞𝐬.</li>
+            <li>𝐇𝐞𝐫𝐫𝐚𝐦𝐢𝐞𝐧𝐭𝐚𝐬: 𝐔𝐬𝐨 𝐝𝐞 𝐫𝐞𝐠𝐢𝐬𝐭𝐫𝐨𝐬 ú𝐧𝐢𝐜𝐨𝐬 𝐝𝐞 𝐛𝐞𝐧𝐞𝐟𝐢𝐜𝐢𝐚𝐫𝐢𝐨𝐬 𝐲 𝐞𝐯𝐚𝐥𝐮𝐚𝐜𝐢𝐨𝐧𝐞𝐬 𝐬𝐨𝐜𝐢𝐨𝐞𝐜𝐨𝐧ó𝐦𝐢𝐜𝐚𝐬.</li>
+        </ul>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2025 Municipalidad Distrital de Huertas. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('header nav');
+    
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+
+
+

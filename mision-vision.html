@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión y Visión - Municipalidad Distrital de Huertas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f9f5;
+        color: #004d00;
+        text-align: center;
+    }
+    
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #006600;
+        color: white;
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    header .logo-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    header .logo-container img {
+        height: 60px;
+        margin-right: 10px;
+    }
+    
+    header .logo-container h1 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    header nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 15px;
+        border: 2px solid white;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+    
+    header nav a:hover {
+        background-color: white;
+        color: #004d00;
+        transform: scale(1.1);
+    }
+    
+    .menu-toggle {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    
+    @media (max-width: 768px) {
+    header nav {
+        display: none; /* Ocultar menú en móviles por defecto */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    header nav.active {
+        display: flex; /* Mostrar el menú al activarse */
+    }
+    header nav a {
+        padding: 10px;
+        font-size: 1rem;
+        border: none;
+    }
+    .menu-toggle {
+        display: block; /* Mostrar el botón en dispositivos móviles */
+        cursor: pointer;
+    }
+}
+
+    
+    .hero {
+        background-color: #e6ffe6;
+        color: #004d00;
+        padding: 80px 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 10px auto;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .municipalidad-imagenes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px 0;
+        margin-bottom: 30px;
+    }
+    
+    .municipalidad-imagenes img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        border: 3px solid #004d00;
+        transition: transform 0.3s ease;
+    }
+    
+    .municipalidad-imagenes img:hover {
+        transform: scale(1.05);
+    }
+    
+    .sections {
+        padding: 30px 20px;
+        border-bottom: 1px solid #004d00;
+        background-color: #e6ffe6;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 800px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .sections h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #004d00;
+    }
+    
+    .sections p, .sections ul {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .card {
+        border: 1px solid #004d00;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 300px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: scale(1.05);
+    }
+    
+    .card img {
+        width: 100%;
+    }
+    
+    .card .content {
+        padding: 15px;
+        background-color: #ffffff;
+    }
+    
+    footer {
+        background-color: #003300;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+    
+    .contact-info, .menu {
+        padding: 20px;
+        background-color: #e6ffe6;
+        border: 1px solid #004d00;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 800px;
+    }
+    
+    .contact-info h3, .menu h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .menu ul, .contact-info ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .menu ul li, .contact-info ul li {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+    
+    .contact-info ul li a {
+        color: #004d00;
+        text-decoration: none;
+    }
+    
+    .contact-info ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    .btn {
+        display: inline-block;
+        background-color: #004d00;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 25px;
+        text-decoration: none;
+        margin-top: 15px;
+        transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+        background-color: white;
+        color: #004d00;
+        border: 2px solid #004d00;
+    }
+        </style>
+<body>
+    
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.jpg" alt="Logo Municipalidad">
+            <h1>Municipalidad Distrital de Huertas</h1>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="mision-vision.html">Misión y Visión</a>
+            <a href="programas.html">Programas Sociales</a>
+            <a href="obras.html">Obras</a>
+            <a href="mesa_partes.php">Mesa de Partes</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </header>
+    
+    <section class="sections">
+        <section>
+            <h2>¿𝐐𝐔𝐈𝐄𝐍𝐄𝐒 𝐒𝐎𝐌𝐎𝐒 𝐘 𝐐𝐔𝐄 𝐇𝐀𝐂𝐄𝐌𝐎𝐒?</h2>
+            <p>
+                𝐒𝐨𝐦𝐨𝐬 𝐥𝐚 𝐌𝐮𝐧𝐢𝐜𝐢𝐩𝐚𝐥𝐢𝐝𝐚𝐝 𝐃𝐢𝐬𝐭𝐫𝐢𝐭𝐚𝐥 𝐝𝐞 𝐇𝐮𝐞𝐫𝐭𝐚𝐬, 𝐮𝐧𝐚 𝐢𝐧𝐬𝐭𝐢𝐭𝐮𝐜𝐢ó𝐧 𝐜𝐨𝐦𝐩𝐫𝐨𝐦𝐞𝐭𝐢𝐝𝐚 𝐜𝐨𝐧 𝐞𝐥 𝐝𝐞𝐬𝐚𝐫𝐫𝐨𝐥𝐥𝐨 𝐲 𝐛𝐢𝐞𝐧𝐞𝐬𝐭𝐚𝐫 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐚 𝐜𝐨𝐦𝐮𝐧𝐢𝐝𝐚𝐝. 𝐍𝐨𝐬 𝐝𝐞𝐝𝐢𝐜𝐚𝐦𝐨𝐬 𝐚 𝐨𝐟𝐫𝐞𝐜𝐞𝐫 𝐬𝐞𝐫𝐯𝐢𝐜𝐢𝐨𝐬 𝐩ú𝐛𝐥𝐢𝐜𝐨𝐬 𝐝𝐞 𝐜𝐚𝐥𝐢𝐝𝐚𝐝, 𝐠𝐞𝐬𝐭𝐢𝐨𝐧𝐚𝐝𝐨𝐬 𝐝𝐞 𝐦𝐚𝐧𝐞𝐫𝐚 𝐞𝐟𝐢𝐜𝐢𝐞𝐧𝐭𝐞 𝐲 𝐫𝐞𝐬𝐩𝐨𝐧𝐬𝐚𝐛𝐥𝐞, 𝐜𝐨𝐧 𝐮𝐧 𝐞𝐧𝐟𝐨𝐪𝐮𝐞 𝐞𝐧 𝐥𝐚 𝐭𝐫𝐚𝐧𝐬𝐩𝐚𝐫𝐞𝐧𝐜𝐢𝐚, 𝐥𝐚 𝐢𝐧𝐜𝐥𝐮𝐬𝐢ó𝐧 𝐲 𝐥𝐚 𝐫𝐞𝐧𝐝𝐢𝐜𝐢ó𝐧 𝐝𝐞 𝐜𝐮𝐞𝐧𝐭𝐚𝐬. 𝐍𝐮𝐞𝐬𝐭𝐫𝐨 𝐩𝐫𝐨𝐩ó𝐬𝐢𝐭𝐨 𝐞𝐬 𝐦𝐞𝐣𝐨𝐫𝐚𝐫 𝐥𝐚 𝐜𝐚𝐥𝐢𝐝𝐚𝐝 𝐝𝐞 𝐯𝐢𝐝𝐚 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐨𝐬 𝐯𝐞𝐜𝐢𝐧𝐨𝐬 𝐦𝐞𝐝𝐢𝐚𝐧𝐭𝐞 𝐥𝐚 𝐦𝐨𝐝𝐞𝐫𝐧𝐢𝐳𝐚𝐜𝐢ó𝐧 𝐝𝐞 𝐥𝐚 𝐠𝐞𝐬𝐭𝐢ó𝐧 𝐥𝐨𝐜𝐚𝐥, 𝐞𝐥 𝐮𝐬𝐨 𝐬𝐨𝐬𝐭𝐞𝐧𝐢𝐛𝐥𝐞 𝐝𝐞 𝐥𝐨𝐬 𝐫𝐞𝐜𝐮𝐫𝐬𝐨𝐬 𝐲 𝐥𝐚 𝐩𝐫𝐨𝐦𝐨𝐜𝐢ó𝐧 𝐝𝐞 𝐢𝐧𝐢𝐜𝐢𝐚𝐭𝐢𝐯𝐚𝐬 𝐪𝐮𝐞 𝐢𝐦𝐩𝐮𝐥𝐬𝐞𝐧 𝐞𝐥 𝐩𝐫𝐨𝐠𝐫𝐞𝐬𝐨 𝐢𝐧𝐭𝐞𝐠𝐫𝐚𝐥 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐨 𝐝𝐢𝐬𝐭𝐫𝐢𝐭𝐨.
+            </p>
+        </section>
+        <section>
+            <h2>𝐌𝐈𝐒𝐈Ó𝐍</h2>
+            <p>
+                𝐄𝐧 𝐥𝐚 𝐌𝐮𝐧𝐢𝐜𝐢𝐩𝐚𝐥𝐢𝐝𝐚𝐝 𝐃𝐢𝐬𝐭𝐫𝐢𝐭𝐚𝐥 𝐝𝐞 𝐇𝐮𝐞𝐫𝐭𝐚𝐬, 𝐭𝐫𝐚𝐛𝐚𝐣𝐚𝐦𝐨𝐬 𝐩𝐚𝐫𝐚 𝐩𝐫𝐨𝐦𝐨𝐯𝐞𝐫 𝐞𝐥 𝐝𝐞𝐬𝐚𝐫𝐫𝐨𝐥𝐥𝐨 𝐢𝐧𝐭𝐞𝐠𝐫𝐚𝐥 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐚 𝐜𝐨𝐦𝐮𝐧𝐢𝐝𝐚𝐝 𝐦𝐞𝐝𝐢𝐚𝐧𝐭𝐞 𝐥𝐚 𝐩𝐫𝐞𝐬𝐭𝐚𝐜𝐢ó𝐧 𝐝𝐞 𝐬𝐞𝐫𝐯𝐢𝐜𝐢𝐨𝐬 𝐩ú𝐛𝐥𝐢𝐜𝐨𝐬 𝐦𝐨𝐝𝐞𝐫𝐧𝐨𝐬 𝐲 𝐞𝐟𝐢𝐜𝐢𝐞𝐧𝐭𝐞𝐬. 𝐍𝐮𝐞𝐬𝐭𝐫𝐨 𝐜𝐨𝐦𝐩𝐫𝐨𝐦𝐢𝐬𝐨 𝐞𝐬 𝐚𝐭𝐞𝐧𝐝𝐞𝐫 𝐥𝐚𝐬 𝐧𝐞𝐜𝐞𝐬𝐢𝐝𝐚𝐝𝐞𝐬 𝐝𝐞 𝐥𝐨𝐬 𝐜𝐢𝐮𝐝𝐚𝐝𝐚𝐧𝐨𝐬 𝐜𝐨𝐧 𝐞𝐪𝐮𝐢𝐝𝐚𝐝, 𝐣𝐮𝐬𝐭𝐢𝐜𝐢𝐚 𝐲 𝐭𝐫𝐚𝐧𝐬𝐩𝐚𝐫𝐞𝐧𝐜𝐢𝐚, 𝐠𝐞𝐧𝐞𝐫𝐚𝐧𝐝𝐨 𝐨𝐩𝐨𝐫𝐭𝐮𝐧𝐢𝐝𝐚𝐝𝐞𝐬 𝐩𝐚𝐫𝐚 𝐭𝐨𝐝𝐨𝐬.
+            </p>
+            <p>
+                𝐍𝐨𝐬 𝐞𝐧𝐟𝐨𝐜𝐚𝐦𝐨𝐬 𝐞𝐧 𝐟𝐨𝐫𝐭𝐚𝐥𝐞𝐜𝐞𝐫 𝐥𝐚 𝐢𝐧𝐟𝐫𝐚𝐞𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐚 𝐮𝐫𝐛𝐚𝐧𝐚 𝐲 𝐫𝐮𝐫𝐚𝐥, 𝐟𝐨𝐦𝐞𝐧𝐭𝐚𝐫 𝐞𝐥 𝐛𝐢𝐞𝐧𝐞𝐬𝐭𝐚𝐫 𝐬𝐨𝐜𝐢𝐚𝐥 𝐲 𝐞𝐜𝐨𝐧ó𝐦𝐢𝐜𝐨, 𝐲 𝐞𝐣𝐞𝐜𝐮𝐭𝐚𝐫 𝐩𝐫𝐨𝐲𝐞𝐜𝐭𝐨𝐬 𝐬𝐨𝐬𝐭𝐞𝐧𝐢𝐛𝐥𝐞𝐬 𝐪𝐮𝐞 𝐫𝐞𝐬𝐩𝐨𝐧𝐝𝐚𝐧 𝐚 𝐥𝐚𝐬 𝐞𝐱𝐩𝐞𝐜𝐭𝐚𝐭𝐢𝐯𝐚𝐬 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐚 𝐩𝐨𝐛𝐥𝐚𝐜𝐢ó𝐧. 𝐀 𝐭𝐫𝐚𝐯é𝐬 𝐝𝐞 𝐮𝐧𝐚 𝐠𝐞𝐬𝐭𝐢ó𝐧 𝐩𝐚𝐫𝐭𝐢𝐜𝐢𝐩𝐚𝐭𝐢𝐯𝐚 𝐲 𝐫𝐞𝐬𝐩𝐨𝐧𝐬𝐚𝐛𝐥𝐞, 𝐛𝐮𝐬𝐜𝐚𝐦𝐨𝐬 𝐜𝐨𝐧𝐬𝐭𝐫𝐮𝐢𝐫 𝐮𝐧 𝐝𝐢𝐬𝐭𝐫𝐢𝐭𝐨 𝐦á𝐬 𝐢𝐧𝐜𝐥𝐮𝐬𝐢𝐯𝐨 𝐲 𝐩𝐫ó𝐬𝐩𝐞𝐫𝐨, 𝐩𝐫𝐢𝐨𝐫𝐢𝐳𝐚𝐧𝐝𝐨 𝐥𝐚 𝐩𝐫𝐨𝐭𝐞𝐜𝐜𝐢ó𝐧 𝐝𝐞𝐥 𝐦𝐞𝐝𝐢𝐨 𝐚𝐦𝐛𝐢𝐞𝐧𝐭𝐞 𝐲 𝐞𝐥 𝐩𝐫𝐨𝐠𝐫𝐞𝐬𝐨 𝐝𝐞 𝐥𝐚𝐬 𝐟𝐮𝐭𝐮𝐫𝐚𝐬 𝐠𝐞𝐧𝐞𝐫𝐚𝐜𝐢𝐨𝐧𝐞𝐬.
+            </p>
+        </section>
+        <section>
+            <h2>𝐕𝐈𝐒𝐈Ó𝐍</h2>
+            <p>
+                𝐐𝐮𝐞𝐫𝐞𝐦𝐨𝐬 𝐩𝐨𝐬𝐢𝐜𝐢𝐨𝐧𝐚𝐫 𝐚 𝐇𝐮𝐞𝐫𝐭𝐚𝐬 𝐜𝐨𝐦𝐨 𝐮𝐧 𝐝𝐢𝐬𝐭𝐫𝐢𝐭𝐨 𝐦𝐨𝐝𝐞𝐥𝐨 𝐞𝐧 𝐠𝐞𝐬𝐭𝐢ó𝐧 𝐩ú𝐛𝐥𝐢𝐜𝐚 𝐲 𝐝𝐞𝐬𝐚𝐫𝐫𝐨𝐥𝐥𝐨 𝐬𝐨𝐬𝐭𝐞𝐧𝐢𝐛𝐥𝐞. 𝐀𝐬𝐩𝐢𝐫𝐚𝐦𝐨𝐬 𝐚 𝐬𝐞𝐫 𝐫𝐞𝐜𝐨𝐧𝐨𝐜𝐢𝐝𝐨𝐬 𝐩𝐨𝐫 𝐧𝐮𝐞𝐬𝐭𝐫𝐚 𝐜𝐚𝐩𝐚𝐜𝐢𝐝𝐚𝐝 𝐩𝐚𝐫𝐚 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦𝐚𝐫 𝐥𝐚 𝐫𝐞𝐚𝐥𝐢𝐝𝐚𝐝 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐚 𝐜𝐨𝐦𝐮𝐧𝐢𝐝𝐚𝐝, 𝐥𝐢𝐝𝐞𝐫𝐚𝐧𝐝𝐨 𝐢𝐧𝐢𝐜𝐢𝐚𝐭𝐢𝐯𝐚𝐬 𝐢𝐧𝐧𝐨𝐯𝐚𝐝𝐨𝐫𝐚𝐬 𝐪𝐮𝐞 𝐢𝐦𝐩𝐮𝐥𝐬𝐞𝐧 𝐞𝐥 𝐜𝐫𝐞𝐜𝐢𝐦𝐢𝐞𝐧𝐭𝐨 𝐞𝐜𝐨𝐧ó𝐦𝐢𝐜𝐨, 𝐬𝐨𝐜𝐢𝐚𝐥 𝐲 𝐜𝐮𝐥𝐭𝐮𝐫𝐚𝐥 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐨𝐬 𝐜𝐢𝐮𝐝𝐚𝐝𝐚𝐧𝐨𝐬.            </p>
+            <p>
+                𝐕𝐢𝐬𝐮𝐚𝐥𝐢𝐳𝐚𝐦𝐨𝐬 𝐮𝐧 𝐝𝐢𝐬𝐭𝐫𝐢𝐭𝐨 𝐝𝐨𝐧𝐝𝐞 𝐥𝐚 𝐢𝐧𝐟𝐫𝐚𝐞𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐚 𝐦𝐨𝐝𝐞𝐫𝐧𝐚, 𝐥𝐨𝐬 𝐬𝐞𝐫𝐯𝐢𝐜𝐢𝐨𝐬 𝐩ú𝐛𝐥𝐢𝐜𝐨𝐬 𝐝𝐞 𝐜𝐚𝐥𝐢𝐝𝐚𝐝 𝐲 𝐥𝐚 𝐚𝐜𝐭𝐢𝐯𝐚 𝐩𝐚𝐫𝐭𝐢𝐜𝐢𝐩𝐚𝐜𝐢ó𝐧 𝐝𝐞 𝐥𝐨𝐬 𝐯𝐞𝐜𝐢𝐧𝐨𝐬 𝐬𝐞𝐚𝐧 𝐩𝐢𝐥𝐚𝐫𝐞𝐬 𝐟𝐮𝐧𝐝𝐚𝐦𝐞𝐧𝐭𝐚𝐥𝐞𝐬 𝐩𝐚𝐫𝐚 𝐜𝐨𝐧𝐬𝐨𝐥𝐢𝐝𝐚𝐫 𝐮𝐧 𝐟𝐮𝐭𝐮𝐫𝐨 𝐬𝐨𝐬𝐭𝐞𝐧𝐢𝐛𝐥𝐞. 𝐍𝐮𝐞𝐬𝐭𝐫𝐚 𝐯𝐢𝐬𝐢ó𝐧 𝐞𝐬 𝐬𝐞𝐫 𝐮𝐧𝐚 𝐦𝐮𝐧𝐢𝐜𝐢𝐩𝐚𝐥𝐢𝐝𝐚𝐝 𝐪𝐮𝐞 𝐢𝐧𝐬𝐩𝐢𝐫𝐞 𝐜𝐨𝐧𝐟𝐢𝐚𝐧𝐳𝐚 𝐲 𝐨𝐫𝐠𝐮𝐥𝐥𝐨, 𝐝𝐞𝐬𝐭𝐚𝐜á𝐧𝐝𝐨𝐧𝐨𝐬 𝐜𝐨𝐦𝐨 𝐮𝐧 𝐫𝐞𝐟𝐞𝐫𝐞𝐧𝐭𝐞 𝐞𝐧 𝐥𝐚 𝐞𝐣𝐞𝐜𝐮𝐜𝐢ó𝐧 𝐝𝐞 𝐨𝐛𝐫𝐚𝐬 𝐲 𝐩𝐫𝐨𝐲𝐞𝐜𝐭𝐨𝐬 𝐪𝐮𝐞 𝐛𝐞𝐧𝐞𝐟𝐢𝐜𝐢𝐞𝐧 𝐚 𝐭𝐨𝐝𝐨𝐬 𝐥𝐨𝐬 𝐬𝐞𝐜𝐭𝐨𝐫𝐞𝐬 𝐝𝐞 𝐥𝐚 𝐩𝐨𝐛𝐥𝐚𝐜𝐢ó𝐧.            </p>
+            <p>
+                𝐀𝐝𝐞𝐦á𝐬, 𝐧𝐨𝐬 𝐩𝐫𝐨𝐲𝐞𝐜𝐭𝐚𝐦𝐨𝐬 𝐜𝐨𝐦𝐨 𝐮𝐧 𝐝𝐢𝐬𝐭𝐫𝐢𝐭𝐨 𝐪𝐮𝐞 𝐩𝐫𝐨𝐦𝐮𝐞𝐯𝐚 𝐥𝐚 𝐜𝐨𝐡𝐞𝐬𝐢ó𝐧 𝐬𝐨𝐜𝐢𝐚𝐥, 𝐥𝐚 𝐩𝐫𝐞𝐬𝐞𝐫𝐯𝐚𝐜𝐢ó𝐧 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐚𝐬 𝐭𝐫𝐚𝐝𝐢𝐜𝐢𝐨𝐧𝐞𝐬 𝐲 𝐥𝐚 𝐩𝐫𝐨𝐭𝐞𝐜𝐜𝐢ó𝐧 𝐝𝐞 𝐧𝐮𝐞𝐬𝐭𝐫𝐨𝐬 𝐫𝐞𝐜𝐮𝐫𝐬𝐨𝐬 𝐧𝐚𝐭𝐮𝐫𝐚𝐥𝐞𝐬, 𝐜𝐨𝐧𝐭𝐫𝐢𝐛𝐮𝐲𝐞𝐧𝐝𝐨 𝐚𝐬í 𝐚 𝐮𝐧 𝐞𝐧𝐭𝐨𝐫𝐧𝐨 𝐞𝐪𝐮𝐢𝐥𝐢𝐛𝐫𝐚𝐝𝐨 𝐲 𝐚𝐫𝐦𝐨𝐧𝐢𝐨𝐬𝐨 𝐩𝐚𝐫𝐚 𝐥𝐚𝐬 𝐠𝐞𝐧𝐞𝐫𝐚𝐜𝐢𝐨𝐧𝐞𝐬 𝐩𝐫𝐞𝐬𝐞𝐧𝐭𝐞𝐬 𝐲 𝐟𝐮𝐭𝐮𝐫𝐚𝐬.
+            </p>
+        </section>
+        <footer>
+            <p>© 2025 Municipalidad Distrital de Huertas. Todos los derechos reservados.</p>
+        </footer>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('header nav');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+
+</body>
+
+</html>
+
+
+
+
